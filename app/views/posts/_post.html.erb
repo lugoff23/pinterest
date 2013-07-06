@@ -3,6 +3,7 @@
 	<% if post.body.length > 0 %>
 		<div class="content">
 		  <%= truncate post.body, length: 100, separator: '...'  %>
+			<%= link_to 'Like', like_post_path(post) unless current_user.likes?(post) %>
 		</div>
 	<% end %>
 	<div class="footer clearfix">

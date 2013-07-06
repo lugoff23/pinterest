@@ -23,6 +23,14 @@ end
 
 group :development do
   gem 'letter_opener'
+  ## Debug ruby code
+  gem 'debugger'
+  ## Provides a better error page for Rails and other Rack apps
+  gem 'better_errors'
+  ## Retrieve the binding of a method's caller, enhances better_errors gem
+  gem 'binding_of_caller'
+  ## A rails plugin to kill N+1 queries and unused eager loading
+  # gem 'bullet'
 end
 
 gem 'jquery-rails'

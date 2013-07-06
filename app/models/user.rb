@@ -16,5 +16,8 @@ class User < ActiveRecord::Base
     medium: '300x200#',
     large: '260x180<'
   }
-  
+
+  acts_as_followable
+  acts_as_follower
+  acts_as_liker
 end

@@ -9,5 +9,6 @@ class Post < ActiveRecord::Base
     medium: '240x',
     large: '480x360>'
   }
-  
+
+  acts_as_likeable  
 end

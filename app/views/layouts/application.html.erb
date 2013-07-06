@@ -70,6 +70,15 @@
     <div class="container-fluid" id="content">
         <div class="row-fluid">
           <div class="span12">
+	        	<!-- Flash messages -->
+					  <% [:notice, :error, :alert].each do |level| %>
+					    <% unless flash[level].blank? %>
+					    <div class="flash-message <%= flash_class(level) %> fade in">
+					      <a href="#" data-dismiss="alert" class="close">×</a>
+					      <%= flash[level] %>
+					    </div>
+					    <% end %>
+					  <% end %>
             <%= yield %>
           </div>
         </div><!--/row-->

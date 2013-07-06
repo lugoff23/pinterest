@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  load_and_authorize_resource
+  
   # GET /posts
   # GET /posts.json
   def index
@@ -80,6 +82,15 @@ class PostsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to posts_url }
       format.json { head :no_content }
+    end
+  end
+  
+  def like
+    @user = current_user
+    @post = Post.find(params[:id])
+    current_user.like!(@post)
+    respond_to do |format|
+      format.html { redirect_to @post, notice: 'Post was successfully liked.' }
     end
   end
 end
