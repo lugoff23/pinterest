@@ -1,0 +1,17 @@
+<div class="tile">
+  <%= link_to image_tag(post.image.url(:medium)), post %>
+	<% if post.body.length > 0 %>
+		<div class="content">
+		  <%= truncate post.body, length: 100, separator: '...'  %>
+		</div>
+	<% end %>
+	<div class="footer clearfix">
+		<div class="pull-left">
+			<%= link_to image_tag(post.user.avatar.url(:tiny)), post.user %>
+			<%= link_to post.user.name, post.user %>
+		</div>
+		<div class="pull-right">
+			<%= time_ago_in_words post.created_at %> ago
+		</div>
+	</div>
+</div>

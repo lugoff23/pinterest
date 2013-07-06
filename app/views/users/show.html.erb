@@ -1,0 +1,10 @@
+<div class="profile">
+	<div class="header clearfix">
+		<div class="avatar"><%= image_tag @user.avatar.url(:small) %></div>
+		<div class="about">
+			<div class="name"><%= @user.name %></div>
+			Joined <%= time_ago_in_words @user.created_at %> ago.
+		</div>
+	</div>
+</div>
+
