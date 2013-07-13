@@ -42,3 +42,7 @@ gem 'paperclip'
 gem 'socialization'
 gem 'kaminari'
 gem 'spaghetti'
+
+# gem 'booky', git: 'https://github.com/owahab/booky'
+
+gem 'capistrano'
